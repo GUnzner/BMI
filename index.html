@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="icon" type="image/x-icon" href="bmi.ico">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <img src="bmi.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                (Human) BMI Calculator
+              </a>
+            </div>
+          </nav>
+    </header>
+
+    <main class="my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md">
+            <img class="img-thumbnail" src="Fat-cat.jpg">
+          </div>
+          <div class="d-flex flex-column align-items-center col-md">
+            <form>
+              <label for="height">Height in cm:</label><br>
+              <input type="text" id="height" name="height"><br>
+              <label for="weight">Weight in kg:</label><br>
+              <input type="text" id="weight" name="weight"><br>
+              <button type="button" id="btn" class="btn btn-primary mt-2" onclick="getBMI();">Calculate</button>
+            </form>
+            <p class="py-2 result" id="text"></p>
+          </div>
+          <div class="col-md">
+            <img class="img-thumbnail" src="skinny-cat.jpg">
+          </div>
+        </div>
+      </div>
+    </main>
+   
+    <footer class="footer text-center mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted">&copy; 2022 Grit Unzner.
+      Need help losing or gaining weight? Find health tips 
+      <a href="https://www.healthline.com/nutrition/healthy-eating-tips" target="_blank">here</a>!</span>
+      </div>
+    </footer>
+  
+      <script src="script.js"></script>
+      <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
