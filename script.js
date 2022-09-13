@@ -10,29 +10,31 @@ function getBMI() {
         height += document.getElementById("height-2").value;
     }
     
-    //console.log(height, weight);
-
-    if (height.isNan === true){
-        let result = document.getElementById("text")
-        result.innerHTML="Please enter a valid number" 
-    } else {
-    
     let BMI = weight/Math.pow(height/100, 2);
     
-    console.log(BMI)
-    
-    let bmiText = "Your BMI is "+BMI.toFixed(2)+"<br>"
-    let result = document.getElementById("text")
-    result.innerHTML=bmiText
-    
-    if(BMI<20){
-        let comment = document.createTextNode("You are underweight.")
-        document.getElementById("text").appendChild(comment);
-    } else if(BMI>=20 && BMI<25){
-        result.innerHTML += "You are normal weight."
+    console.log(isNaN(BMI))
+
+    if (isNaN(BMI)){
+        let result = document.getElementById("text")
+        result.innerHTML="Please enter a valid number" 
+        
     } else {
-        result.innerHTML += "You are overweight."
-    }}
+        
+        console.log(BMI)
+        
+        let bmiText = "Your BMI is "+BMI.toFixed(2)+"<br>"
+        let result = document.getElementById("text")
+        result.innerHTML=bmiText
+        
+        if(BMI<20){
+            let comment = document.createTextNode("You are underweight.")
+            document.getElementById("text").appendChild(comment);
+        } else if(BMI>=20 && BMI<25){
+            result.innerHTML += "You are normal weight."
+        } else {
+            result.innerHTML += "You are overweight."
+        }
+    }
 }
 document.getElementById("weight")
     .addEventListener("keyup", function(event) {
