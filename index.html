@@ -30,20 +30,23 @@
           <div class="d-flex flex-column align-items-center col-md">
             <button type="button" class="btn btn-info py-2 mt-2" onclick="switchUnit();">Change units of measurement</button>
             <br>
-            <form><table>
-              <tr>
-                  <td><label for="height" id="heightTag">Height in m:</label></td>
-                  <td><label for="height-2" id="heightTag-2">and cm:</label></td>
-              </tr>
-              <tr>
-                  <td><input type="text" id="height" name="height-1"></td>
-                  <td><input type="text" id="height-2" name="height-2"></td>
-              </tr>
-              </table>
-              
-              <label for="weight" id="weightTag">Weight in kg:</label><br>
-              <input type="text" id="weight" name="weight"><br>
-              <button type="button" id="btn" class="btn btn-primary mt-2" onclick="getBMI();">Calculate</button>
+          
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="height" class="form-label" id="heightTag">Height in m:</label>
+                <input type="text" class="form-control" id="height" name="height-1" required>
+              </div>
+              <div class="col-md-6">
+                  <label for="height-2" class="form-label" id="heightTag-2">and cm:</label>
+                  <input type="text" class="form-control" id="height-2" name="height-2" required>
+              </div>
+              <div class="col-md-6">
+                  <label for="weight"  class="form-label" id="weightTag">Weight in kg:</label>
+                  <input type="text" class="form-control" id="weight" name="weight" required>
+              </div>
+              <div class="col-md-12">
+                <button type="button" id="btn" class="btn btn-primary mt-2" onclick="getBMI();">Calculate</button>
+              </div>
             </form>
             <p class="py-2 result" id="text"></p>
           </div>

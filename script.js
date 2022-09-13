@@ -11,6 +11,11 @@ function getBMI() {
     }
     
     //console.log(height, weight);
+
+    if (height.isNan === true){
+        let result = document.getElementById("text")
+        result.innerHTML="Please enter a valid number" 
+    } else {
     
     let BMI = weight/Math.pow(height/100, 2);
     
@@ -27,7 +32,7 @@ function getBMI() {
         result.innerHTML += "You are normal weight."
     } else {
         result.innerHTML += "You are overweight."
-    }
+    }}
 }
 document.getElementById("weight")
     .addEventListener("keyup", function(event) {
