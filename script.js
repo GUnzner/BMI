@@ -1,15 +1,16 @@
 function getBMI() {
 
-    let height = document.getElementById("height").value;
-    let weight = document.getElementById("weight").value;
+    let height = parseFloat(document.getElementById("height").value);
+    let weight = parseFloat(document.getElementById("weight").value);
 
     if(document.getElementById("heightTag").innerText == "Height in feet:"){
-        height = (height * 12 + parseFloat(document.getElementById("height-2").value)) * 2.54
+        height = (height*12 + parseFloat(document.getElementById("height-2").value))*2.54
         weight /= 2.2046
     } else {
-        height += document.getElementById("height-2").value;
+        height = height*100 + parseFloat(document.getElementById("height-2").value);
     }
     
+    console.log(height)
     let BMI = weight/Math.pow(height/100, 2);
     
     console.log(isNaN(BMI))
